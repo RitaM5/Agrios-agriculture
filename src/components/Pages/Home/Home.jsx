@@ -1,77 +1,177 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Banner from '../Banner'
-
+import bgImage from '../../../assets/background-1.jpg'
+import { Parallax } from 'react-parallax';
 const Home = () => {
-    const info = [
+    const data = [
         {
             id: 1,
-            feature: 'Feature 01',
-            title: 'We are using a new technology',
-            image: 'https://img.icons8.com/color/40/tractor.png'
+            logo: 'https://img.icons8.com/ios/40/tractor.png',
+            title: 'Agriculture Products',
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/service-01.webp'
         },
         {
             id: 2,
-            feature: 'Feature 02',
-            title: 'Good in smart organic services',
-            image: 'https://img.icons8.com/external-justicon-flat-justicon/40/external-tree-autumn-season-justicon-flat-justicon.png'
+            logo: 'https://img.icons8.com/avantgarde/40/deciduous-tree.png',
+            title: 'Organic Products',
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/service-02.webp'
         },
         {
             id: 3,
-            feature: 'Feature 03',
-            title: 'Reforming in the systems',
-            image: 'https://img.icons8.com/external-itim2101-lineal-itim2101/40/external-farmer-male-occupation-avatar-itim2101-lineal-itim2101-1.png'
+            logo: 'https://img.icons8.com/fluency/40/carrot.png',
+            title: 'Fresh Vegetables',
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/service-03.webp'
+        },
+        {
+            id: 4,
+            logo: 'https://img.icons8.com/dusk/40/milk.png',
+            title: 'Dairy Products',
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/service-04.webp'
         }
     ];
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
     return (
-        <div className=' relative my-20'>
+        <div className='font-poppins relative'>
             <Banner></Banner>
-            <section >'
-                <div className={`${windowWidth > 768 ? 'absolute bottom-0  left-0 right-0 my-container' : 'px-12 mt-3'}`}>
-                    <div className='w-full h-full my-section' >
-                        <div className='grid grid-cols-1 md:grid-cols-3 gap-24 md:gap-8'>
-                            {
-                                info.map(card => (
-                                    <div className="card w-full bg-base-100 shadow-xl h-[200px]">
-                                        <div className="card-body items-center text-center">
-                                            <h2 className="card-title">{card.feature}</h2>
-                                            <p>{card.title}</p>
-                                            <div className="card-actions justify-end">
-                                                <div
-                                                    className='bg-[#4baf47] text-white py-6 px-6 rounded mt-10'>
-                                                    <img src={card.image} style={{
-                                                        transformStyle: 'preserve-3d',
-                                                        transition: 'transform 0.4s',
-                                                    }}
-                                                        onMouseEnter={(e) => {
-                                                            e.currentTarget.style.transform = 'rotateY(180deg)';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.currentTarget.style.transform = 'rotateY(0deg)';
-                                                        }} alt="" />
-                                                </div>
-                                            </div>
-                                        </div>
+            <section className='my-container my-14'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-24 items-center'>
+                    <div className='flex items-center'>
+                        <div className=''>
+                            <img className='w-40 h-40 md:w-60 md:h-60 rounded-full mt-14 md:mt-32 absolute animate-bounce transition duration-1000 ease-in' src="https://tplabs.co/agrios/wp-content/uploads/2022/07/image-02.webp" alt="" srcset="" />
+                        </div>
+                        <img className='rounded-full' src="https://tplabs.co/agrios/wp-content/uploads/2022/07/image-01.webp" alt="" srcset="" />
+                    </div>
+                    <div className=' space-y-4 px-4'>
+                        <p className=' text-[25px] font-shadow text-amber-600 font-bold'>Our Introductions</p>
+                        <h1 className=' text-4xl font-semibold w-[390px]'>Agriculture & Organic Product Farm</h1>
+                        <h2 className='text-2xl text-[#4baf47] font-semibold'>Agrios is the largest global organic farm.</h2>
+                        <p className=' text-lg'>
+                            There are many variations of passages of lorem ipsum available but the majority have suffered alteration in some form by injected humor or random word which don’t look even.
+                        </p>
+                        <div className=' grid grid-cols-1 md:grid-cols-2 py-3'>
+                            <div>
+                                <img style={{
+                                    transformStyle: 'preserve-3d',
+                                    transition: 'transform 0.4s',
+                                }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'rotateY(180deg)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'rotateY(0deg)';
+                                    }} src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/50/external-fruits-weight-loss-program-inipagistudio-mixed-inipagistudio.png" alt="" srcset="" />
+                                <h2 className='text-[20px] font-semibold mt-2'>Growing fruits
+                                    vegetables</h2>
+                            </div>
+                            <div>
+                                <img style={{
+                                    transformStyle: 'preserve-3d',
+                                    transition: 'transform 0.4s',
+                                }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'rotateY(180deg)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'rotateY(0deg)';
+                                    }} src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/50/external-fruits-farm-flaticons-lineal-color-flat-icons.png" alt="" srcset="" />
+                                <h2 className='text-[20px] font-semibold mt-2'>Tips for ripening
+                                    your fruits</h2>
+                            </div>
+                        </div>
+                        <ul className='text-lg space-y-2'>
+                            <li className=' inline-flex items-center gap-2'>
+                                <label className="label cursor-pointer">
+                                    <input type="checkbox" checked="checked" className="text-lg" />
+                                </label>
+                                <span>Lorem Ipsum is not simply random text.</span>
+                            </li>
+                            <li className=' inline-flex items-center gap-2'>
+                                <label className="label cursor-pointer">
+                                    <input type="checkbox" checked="checked" className="" />
+                                </label>
+                                <span>Making this the first true generator on the internet.</span>
+                            </li>
+                        </ul>
+                        <button className="px-5 py-3 text-white text-lg font-medium rounded bg-[#4baf47] hover:bg-[#353d1d]">Discover More</button>
+                    </div>
+                </div>
+                <div className=' bottom-36 flex justify-end'>
+                    <img className='h-[350px]' src="https://tplabs.co/agrios/wp-content/uploads/2022/07/farm.webp" alt="" srcset="" />
+                </div>
+            </section>
+            <section className='my-14 my-container'>
+                <div className=' space-y-2 text-center'>
+                    <p className=' text-[25px] font-shadow text-amber-600 font-bold'>Our Services</p>
+                    <h1 className=' text-center mx-auto text-4xl font-semibold '>What We Offer</h1>
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 pt-14 px-4'>
+                    {
+                        data.map(info => (
+                            <div className="group relative w-full rounded-lg shadow-xl">
+                                <div className=''><img src={info.image} alt="Shoes" className=' h-full object-cover group-hover group-hover:scale-125 transition-transform duration-500 rounded-lg w-full' /></div>
+                                <div className="bg-base-100 card shadow-xl bottom-14 py-9 w-56 mx-auto">
+                                    <div className='bg-[#a1c013] px-4 rounded  py-4 w-20 mx-auto hover:bg-[#c9cb0b]'>
+                                        <img src={info.logo} alt="" srcset="" />
                                     </div>
-                                ))
-                            }
+                                    <p className='text-center mt-3 text-xl font-semibold'>{info.title}</p>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </section>
+            {/* <section>
+                <div class="flex min-h-screen items-center justify-center bg-base-800">
+                    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                        <div class="h-96 w-72">
+                            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+                        <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                            <h1 class="font-dmserif text-3xl font-bold text-white">Beauty</h1>
+                            <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+                            <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </section> */}
+            <section className='py-20'>
+                <div className='bg-[#4baf47] my-container rounded-2xl  relative top-44 z-10'>
+                    <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center pt-12'>
+                        <div>
+                            <h1 className=' font-shadow text-5xl text-white font-semibold'>6570</h1>
+                            <p className='text-white text-2xl mt-3'>Agriculture Products</p>
+                        </div>
+                        <div>
+                            <h1 className=' font-shadow text-5xl text-white font-semibold'>6,420</h1>
+                            <p className='text-white text-2xl mt-3'>Projects Completed</p>
+                        </div>
+                        <div>
+                            <h1 className=' font-shadow text-5xl text-white font-semibold'>6,420</h1>
+                            <p className='text-white text-2xl mt-3'>Satisfied Clients</p>
+                        </div>
+                        <div>
+                            <h1 className=' font-shadow text-5xl text-white font-semibold'>6,420</h1>
+                            <p className='text-white text-2xl mt-3'>Experts Farmers</p>
+                        </div>
+                    </div>
+                    <div className=' flex justify-center'>
+                        <img src="https://tplabs.co/agrios/wp-content/uploads/2022/07/wheats-2.webp" alt="" srcset="" />
+                    </div>
+                </div>
+                <Parallax strength={600} bgImage={bgImage} className=" w-full h-[900px] relative"
+                   >
+                    <div className='absolute inset-0 bg-black opacity-60'>
+                        <div className='px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 absolute inset-0 items-center my-container'>
+                            <div>
+                                <h1 className='md:w-[350px] w-[150px] text-white text-4xl  md:text-5xl lg:text-7xl lg:mt-72 mt-52 font-semibold'>Agriculture Matters to the Future of Development</h1>
+                            </div>
+                            <div>
+                                <h2 className='lg:mt-52 lg:ml-80 mt-0 ml-0 font-shadow text-[#efaf03] font-semibold text-2xl'>Watch our video</h2>
+                            </div>
                         </div>
                     </div>
 
-                </div>
+                </Parallax>
             </section>
         </div>
     );
