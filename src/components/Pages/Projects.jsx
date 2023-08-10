@@ -47,7 +47,7 @@ const Projects = () => {
                 className='mySwiper mt-12 rounded-box min-h-screen items-center justify-center bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {
                     projects.map(project => (
-                        <SwiperSlide className="group mt-12 relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                        <SwiperSlide className="group card w-full mt-12 relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
                             <div className="">
                                 <img className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={project.image} alt="" />
                             </div>

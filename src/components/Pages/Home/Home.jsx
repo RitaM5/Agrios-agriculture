@@ -5,6 +5,7 @@ import bgImage from '../../../assets/background-1.jpg'
 import { Parallax } from 'react-parallax';
 import ScrollTrigger from 'react-scroll-trigger'
 import Projects from '../Projects';
+import Review from '../Review';
 const Home = () => {
     const [counterOn, setCounterOn] = useState(false);
     const data = [
@@ -180,6 +181,9 @@ const Home = () => {
             </section>
             <section className='my-container my-12'>
                 <Projects></Projects>
+            </section>
+            <section className=''>
+                <Review></Review>
             </section>
         </div>
     );
