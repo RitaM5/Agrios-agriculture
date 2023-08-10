@@ -14,15 +14,15 @@ const Banner = () => {
                         <h1 className='text-lg font-semibold'>WELCOME TO AGRIOS FARMING</h1>
                         <h2 className='text-6xl font-semibold font-shadow'>Agriculture Eco Farming</h2>
                         <p className=''>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                        <div className='inline-flex gap-6'>
+                        <div className='inline-flex gap-6 '>
                             <button className="px-5 text-lg font-medium rounded bg-[#4baf47] hover:bg-[#353d1d]">Discover More</button>
                             <img src="https://tplabs.co/agrios/wp-content/uploads/2022/07/leaf-02.webp" alt="" srcset="" />
                         </div>
                     </div>
                 </div>
-                <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-                    <a href="#slide4" className="btn btn-circle mr-5">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+                <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 top-0">
+                    <a href="#slide1" className="btn btn-circle mr-5 mt-96">❮</a>
+                    <a href="#slide3" className="btn btn-circle mt-96">❯</a>
                 </div>
             </div>
             <div id="slide2" className={`carousel-item relative w-full`}>
@@ -32,15 +32,15 @@ const Banner = () => {
                         <h1 className='text-lg font-semibold'>WELCOME TO AGRIOS FARMING</h1>
                         <h2 className='text-6xl font-semibold font-shadow'>Agriculture Eco Farming</h2>
                         <p className=''>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                        <div className='inline-flex gap-6'>
+                        <div className='inline-flex gap-6 '>
                             <button className="px-5 text-lg font-medium rounded bg-[#4baf47] hover:bg-[#353d1d]">Discover More</button>
                             <img src="https://tplabs.co/agrios/wp-content/uploads/2022/07/leaf-02.webp" alt="" srcset="" />
                         </div>
                     </div>
                 </div>
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-                    <a href="#slide1" className="btn btn-circle mr-5">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
+                    <a href="#slide1" className="btn btn-circle mr-5 mt-96">❮</a>
+                    <a href="#slide3" className="btn btn-circle mt-96">❯</a>
                 </div>
             </div>
             <div id="slide3" className={`carousel-item relative w-full`}>
@@ -57,8 +57,8 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-                    <a href="#slide2" className="btn btn-circle mr-5">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
+                    <a href="#slide2" className="btn btn-circle mr-5 mt-96">❮</a>
+                    <a href="#slide4" className="btn btn-circle mt-96">❯</a>
                 </div>
             </div>
         </div>
