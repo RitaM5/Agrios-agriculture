@@ -8,6 +8,9 @@ import Projects from '../Projects';
 import Review from '../Review';
 import Benefits from '../Benefits';
 import News from '../News';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 const Home = () => {
     const [counterOn, setCounterOn] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -23,6 +26,28 @@ const Home = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    const logos = [
+        {
+            id: 1,
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/partner-01-1.webp'
+        },
+        {
+            id: 2,
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/partner-02-1.webp'
+        },
+        {
+            id: 3,
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/partner-03-1.webp'
+        },
+        {
+            id: 4,
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/partner-04-1.webp'
+        },
+        {
+            id: 5,
+            image: 'https://tplabs.co/agrios/wp-content/uploads/2022/07/partner-05-1.webp'
+        },
+    ]
     const data = [
         {
             id: 1,
@@ -203,8 +228,44 @@ const Home = () => {
             <section className='my-container my-14'>
                 <Benefits></Benefits>
             </section>
-            <section className={` ${windowWidth<367 ? 'mt-96' : 'my-container mt-4'}`}>
+            <section className={` ${windowWidth < 367 ? 'mt-96' : 'my-container mt-4'}`}>
                 <News></News>
+            </section>
+            <section className='my-14 bg-cover bg-no-repeat  bg-[url(https://tplabs.co/agrios/wp-content/uploads/2022/07/line-02.webp)]'>
+                <Swiper
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        480: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+
+                        1200: {
+                            slidesPerView: 5,
+                            spaceBetween: 10,
+                        }
+                    }}
+                    slidesPerView={4}
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    pagination={{
+                        clickable: true,
+                    }} className='my-container'>
+                    {
+                        logos.map(logo => (
+                            <SwiperSlide className="ml-8 my-8 py-5">
+                                <img src={logo.image} alt="" className='h-24 opacity-70' srcset="" />
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
             </section>
         </div>
     );
