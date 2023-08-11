@@ -38,6 +38,25 @@ const Projects = () => {
                 <h1 className=' text-center mx-auto text-4xl font-semibold '>Explore Projects</h1>
             </div>
             <Swiper
+               breakpoints={{
+                0: {
+                    slidesPerView:1,
+                    spaceBetween:10,
+                },
+                480: {
+                    slidesPerView:1,
+                    spaceBetween:10,
+                },
+                768: {
+                    slidesPerView:2,
+                    spaceBetween:10,
+                },
+              
+                1200: {
+                    slidesPerView:4,
+                    spaceBetween:10,
+                }
+            }}
                 slidesPerView={4}
                 spaceBetween={30}
                 centeredSlides={true}
