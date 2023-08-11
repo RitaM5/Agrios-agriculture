@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CountUp from 'react-countup'
 import Banner from '../Banner'
 import bgImage from '../../../assets/background-1.jpg'
@@ -10,6 +10,19 @@ import Benefits from '../Benefits';
 import News from '../News';
 const Home = () => {
     const [counterOn, setCounterOn] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const data = [
         {
             id: 1,
@@ -190,7 +203,7 @@ const Home = () => {
             <section className='my-container my-14'>
                 <Benefits></Benefits>
             </section>
-            <section className='my-container my-14'>
+            <section className={` ${windowWidth<367 ? 'mt-96' : 'my-container mt-4'}`}>
                 <News></News>
             </section>
         </div>

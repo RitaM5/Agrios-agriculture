@@ -2,9 +2,9 @@ import React from 'react';
 
 const Benefits = () => {
     return (
-        <div className='py-14 font-poppins grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+        <div className='py-20  font-poppins grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
             <div className='relative px-4'>
-                <div className='w-52 rounded-3xl h-[550px] md:h-[735px] bg-green-600'>
+                <div className='w-52 rounded-3xl h-[550px] md:h-[735px] bg-[#4baf47]'>
 
                 </div>
                 <div className=' translate-x-6 absolute top-0'>
@@ -60,7 +60,7 @@ const Benefits = () => {
                             </p>
                         </div>
                     </div>
-                    <p className="px-5 py-4 inline-block text-white text-lg font-medium roundedbg-[#4baf47] hover:bg-[#353d1d]">Discover More </p>
+                    <p className="px-5 py-4 inline-block text-white text-lg font-medium rounded bg-[#4baf47] hover:bg-[#353d1d]">Discover More </p>
                 </div>
             </div>
         </div>
