@@ -1,5 +1,5 @@
 import React from 'react'; import { FaFacebookMessenger, FaFacebook, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarker } from 'react-icons/fa';
-
+import Fade from 'react-reveal/Fade';
 const Footer = () => {
     return (
         <div className='mt-14'>
@@ -80,12 +80,14 @@ const Footer = () => {
             <footer>
                 <div className='bg-gradient-to-b from-black to-gray-800'>
                     <div className='py-7 space-y-1 container mx-auto text-white px-20 flex flex-col md:flex-row md:justify-between text-center justify-center'>
-
-                        <p className='text-2xl font-semibold'>© All Copyright 2022 by TPLabs.co</p>
-
-                        <p className='text-gray-400 mt-4 md:mt-0'><span className='mr-3 font-semibold text-lg'>Terms of Use</span>
-                            <span className='text-[20px]'>|</span>
-                            <span className='font-semibold text-lg ml-3'> Privacy Policy</span></p>
+                        <Fade left duration={4000}>
+                            <p className='text-2xl font-semibold'>© All Copyright 2022 by TPLabs.co</p>
+                        </Fade>
+                        <Fade right duration={4000}>
+                            <p className='text-gray-400 mt-4 md:mt-0'><span className='mr-3 font-semibold text-lg'>Terms of Use</span>
+                                <span className='text-[20px]'>|</span>
+                                <span className='font-semibold text-lg ml-3'> Privacy Policy</span></p>
+                        </Fade>
                     </div>
                 </div>
             </footer>

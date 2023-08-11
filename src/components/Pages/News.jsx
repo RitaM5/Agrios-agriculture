@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUser, FaComment } from 'react-icons/fa';
+import { motion } from "framer-motion"
 const News = () => {
 
     const articles = [
@@ -37,8 +38,8 @@ const News = () => {
             </div>
             <div className=' my-14 md:my-2 grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 px-4'>
                 {
-                    articles.map(article => (
-                        <div className="card w-full bg-base-100 shadow-xl my-14">
+                    articles.map((article, i) => (
+                        <motion.div initial={{opacity: 0, translateX:  50, translateY: -50}} animate={{opacity:1, translateX:0, translateY:0}} transition={{duration:0.9, delay: i+0.2}} className="card w-full bg-base-100 shadow-xl my-14">
                             <figure className='group'>
                                 <img className='object-cover w-full transition-transform duration-500 group-hover:rotate-3  group-hover:scale-125' src={article.image} alt="" />
                             </figure>
@@ -52,7 +53,7 @@ const News = () => {
                                 </div>
                                 <p className='text-left lg:text-center my-4 text-2xl font-semibold'>{article.title}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </div>
